@@ -8,7 +8,12 @@ Standard library only; no network access; writes only to MAKEFUN_OUTPUT_DIR.
 import os
 import sys
 
-ENTRY = "Forty minutes in, the only decision we made was who should send the email saying this meeting was unnecessary \u2014 so we scheduled another meeting next Tuesday to discuss the email."
+ENTRY = (
+    # The joke lands in two beats: forty wasted minutes produce only a
+    # decision about an email, then the punchline schedules yet another
+    # meeting to discuss that email — the meeting reproduces itself.
+    "Forty minutes in, the only decision we made was who should send the email saying this meeting was unnecessary \u2014 so we scheduled another meeting next Tuesday to discuss the email."
+)
 
 
 def validate_entry(text: str) -> None:
